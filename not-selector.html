@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Matches Any Selector</title>
+        <style>
+            html {
+                background-color:white;
+            }
+
+            * {
+                color:black;
+            }
+
+            h1 {
+                font-size:12vh;
+                margin-bottom:0;
+                border-left:1vh salmon solid;
+                padding-left:1vh;
+            }
+
+            body {
+                padding:1vh;
+            }
+
+            main {
+                display:flex;
+            }
+
+            article {
+                margin:auto;
+                width:50%;
+            }
+
+            section :not(h3){
+                background-color:salmon;
+                padding:1vh;
+                color:white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>Not Pseudoclass</h1>
+                <i>The not pseudoclass styles any elements that do not fit the criteria specified in the style declarations.</i>
+                <hr width="50%" align="left">
+                <section>
+                    <p>The following headings are styled because they are not h3 elements.</p>
+                    <h3>I am H3</h3>
+                    <h4>I am H4</h4>
+                    <h5>I am H5</h5>
+                    <h6>I am H6</h6>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
