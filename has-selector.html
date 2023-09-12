@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Matches Any Selector</title>
+        <style>
+            html {
+                background-color:white;
+            }
+
+            * {
+                color:black;
+            }
+
+            h1 {
+                font-size:12vh;
+                margin-bottom:0;
+                border-left:1vh salmon solid;
+                padding-left:1vh;
+            }
+
+            body {
+                padding:1vh;
+            }
+
+            main {
+                display:flex;
+            }
+
+            article {
+                margin:auto;
+                width:50%;
+            }
+
+            section:has(ul) {
+                background-color:salmon;
+                color:white;
+                padding:1vh;
+            }
+
+            section:has(ul) li {
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>Has Any Pseudoclass</h1>
+                <i>The Has pseudoclass only applies the style to elements with certain relationship with other elements.</i>
+                <hr width="50%" align="left">
+                <h3>Has Pseudoclasses</h3>
+                <p>The style was coded against the section with an unordered list.</p>
+                <p>The has() functional selector allows you to target parents based on their children. </p>
+                <section>
+                    <ul>
+                        <li>I am an unordered list.</li>
+                    </ul>
+                </section>
+                <section>
+                    <ol>
+                        <li>I am an ordered list.</li>
+                    </ol>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
