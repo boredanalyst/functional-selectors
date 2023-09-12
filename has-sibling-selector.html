@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Matches Any Selector</title>
+        <style>
+            html {
+                background-color:white;
+            }
+
+            * {
+                color:black;
+            }
+
+            h1 {
+                font-size:12vh;
+                margin-bottom:0;
+                border-left:1vh salmon solid;
+                padding-left:1vh;
+            }
+
+            body {
+                padding:1vh;
+            }
+
+            main {
+                display:flex;
+            }
+
+            article {
+                margin:auto;
+                width:50%;
+            }
+
+            li:has(+ li) {
+                background-color:salmon;
+                color:white;
+                padding:1vh;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>Has Any Pseudoclass</h1>
+                <i>The Has pseudoclass only applies the style to elements with certain relationship with other elements.</i>
+                <hr width="50%" align="left">
+                <h3>Has Pseudoclasses</h3>
+                <p>The style was applied against the list item with a direct sibling.</p>
+                <p>The functional selector :has() can be used to apply styles against elements.</p>
+                <section>
+                    <ul>
+                        <li>I have a sibling after me.</li>
+                        <li>I don't have a sibling after me.</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
