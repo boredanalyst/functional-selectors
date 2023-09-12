@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Matches Any Selector</title>
+        <style>
+            html {
+                background-color:white;
+            }
+
+            * {
+                color:black;
+            }
+
+            h1 {
+                font-size:12vh;
+                margin-bottom:0;
+                border-left:1vh salmon solid;
+                padding-left:1vh;
+            }
+
+            body {
+                padding:1vh;
+            }
+
+            main {
+                display:flex;
+            }
+
+            article {
+                margin:auto;
+                width:50%;
+            }
+
+            :is(h3,h4,h5,h66) {
+                background-color:salmon;
+                color:white;
+                padding:1vh;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>Matches Any Pseudoclasses</h1>
+                <i>Matches-Any selector allows you to string together selectors and still goes through with the styling even if one of the selector is wrong.</i>
+                <hr width="50%" align="left">
+                <section>
+                    <p>These are some headings with different styles.</p>
+                    <p>The headings was styled in a list with h6 as a typo.</p>
+                    <p>That being said, the styles for the other headings were still applied.</p>
+                    <h3>I am H3</h3>
+                    <h4>I am H4</h4>
+                    <h5>I am H5</h5>
+                    <h6>I am H6</h6>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
